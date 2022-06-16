@@ -1,6 +1,5 @@
 //-----------------------------------------------------------------------------
 // Joel Sojan, jsojan
-// CSE 101 Spring 2022 PA6
 //
 // BigInteger.h
 // Header file for the BigInteger ADT

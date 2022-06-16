@@ -1,7 +1,7 @@
 /******************************************************************************
 *
 * Joel Sojan, jsojan
-* 2022 Spring CSE101 PA3
+* 
 * Graph.c
 * C file for Graph ADT
 ******************************************************************************/
@@ -219,11 +219,6 @@ int getFinish(Graph G, int u) {
 
 // Manipulation procedures
 
-// Note the implentation of addArc() and addEdge() functions are borrowed from
-// my own implementation of these functions from pa2 since they serve the same
-// purpose in both assignments so I am citing my own code borrowed from pa2
-// for these two functions.
-
 // Create addArc function which adds a direct edge to graph G by adding vertex // v to the adjacency list of u but not vise versa. Preconditions fro this 
 // graph are that graph G is not NULL, 1 <= u <= getOrder(G) and 
 // 1 <= v <= getOrder(G).
@@ -339,10 +334,7 @@ void addEdge(Graph G, int u, int v) {
 
 // Perform DFS (Depth First Search) with the function DFS(). A helper function
 // called Visit() will also be written and this function is used to vist() 
-// a vertex and finish it. Note this implementation of DFS() is credited to the
-// DFS algorithm psuedocode provided on the class website under
-// Examples/Pseudo-Code/GraphAlgorithms which I borrowed for my own
-// implementation. DFS() has the precondition that the
+// a vertex and finish it. DFS() has the precondition that the
 // length(S) == (n = (getOrder(G)).
 
 void Visit(Graph G, List L, int x, int *time) {
@@ -522,8 +514,7 @@ Graph copyGraph(Graph G) {
 
 // Create printGraph()  function which prints out the adjacency list 
 // representation of the Graph. The precondition of this function is
-// that the graph G is not NULL. Note this implementation of printGraph()
-// follows my own implementation of printGraph from pa2.
+// that the graph G is not NULL. 
 
 void printGraph(FILE* out, Graph G) {
     // Check that the graph G is not Null.

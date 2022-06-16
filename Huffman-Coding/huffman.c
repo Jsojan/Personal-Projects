@@ -16,11 +16,7 @@
 // This function builds the huffman tree based on a computer histogram where
 // the histogram will have ALPHABET number of indices. Since this function is
 // of type Node it returns the root of the constructed Huffman Tree as the
-// greatest parent Node. Credit to the asgn6 file since it provided python
-// psuedocode which I borrowed for my implementation of huffman.c starting
-// on page 14 of the assignment file. Credit to TA Eugene Chou for explaining
-// that the nodes need to be enqueued first from the histogram in his lab
-// section video on 2/25/2022.
+// greatest parent Node.
 
 Node *build_tree(uint64_t hist[static ALPHABET]) {
     // Build the priority queue by calling pq_create with size of
@@ -79,9 +75,7 @@ Node *build_tree(uint64_t hist[static ALPHABET]) {
 
 // This function populates a code table, building a code for each symbol
 // in the Huffman Tree. Since this is a void typed function it should not
-// return anything. Credit to the assignment 6 file (page 14) for
-// the provided python pseudo code which I utilized for my build
-// codes function.
+// return anything.
 
 void build_codes(Node *root, Code table[static ALPHABET]) {
     // Initialize code c and bit to be used.
@@ -117,9 +111,7 @@ void build_codes(Node *root, Code table[static ALPHABET]) {
 
 // This function dumps a tree through a post-order traversal of the
 // Huffman Tree and writing it to outfile. For each leaf, it should write
-// an 'L' while for each interior node it should write an 'I'. Credit to the
-// asgn6 file (page 15) for the provided python psuedocode which I used for
-// my implementation of the dump_tree function.
+// an 'L' while for each interior node it should write an 'I'. 
 
 void dump_tree(int outfile, Node *root) {
 
@@ -156,9 +148,7 @@ void dump_tree(int outfile, Node *root) {
 
 // Reconstructs a Huffman tree given its post-order tree dump stored
 // in the tree dump. Since this function is a node pointer it returns a
-// pointer to the root node of the constructed tree. Credit to TA Brian Zhao
-// since I followed his psuedocode explanation during his lab section on
-// 2/28/2022 to rebuild the tree which I implemented here.
+// pointer to the root node of the constructed tree.
 
 Node *rebuild_tree(uint16_t nbytes, uint8_t tree_dump[static nbytes]) {
     // Create the stack with size of Stack.
@@ -203,9 +193,7 @@ Node *rebuild_tree(uint16_t nbytes, uint8_t tree_dump[static nbytes]) {
 // This function is the destructor for the Huffman tree. Similar to dump
 // tree, this function requires a post-order traversal of the tree to free
 // the nodes. It should also set the pointer to NULL and since this a void
-// type function it should not return anything. The post order traversal is
-// the same one borrowed from the assignment 6 file page 15 which I used
-// for clearing the nodes in tree.
+// type function it should not return anything. 
 
 void delete_tree(Node **root) {
     // Perform a similar post order traversal from tree dump.

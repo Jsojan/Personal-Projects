@@ -1,7 +1,7 @@
 /******************************************************************************
 *
 * Joel Sojan, jsojan
-* 2022 Spring CSE101 PA3
+* 
 * GraphTest.c
 * C file for testing the Graph ADT functions.
 ******************************************************************************/
@@ -60,10 +60,7 @@ int main(int argc, char* argv[]) {
 
     printf("This is the value of the size of the Graph: %d\n", getSize(G));
 
-    // Call DFS Function on Graph G with list L for the first time. Note
-    // printing the discover finish and parent times was borrowed from the
-    // sample test from GraphClient from the 101 website which I am citing
-    // this for the test.
+    // Call DFS Function on Graph G with list L for the first time.
 
     DFS(G, L);
     printf("\n");

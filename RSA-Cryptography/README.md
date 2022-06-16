@@ -1,4 +1,4 @@
-# Assignment 5 - RSA Encryption (README.md)
+# RSA Encryption (README.md)
 
 ## Short description:
      This progam performs RSA encryption through the usage of number theoretic functions, public and private keys and mathematical encrypting and decrypting of messages using said number theoretic functions. Furthermore, this program implements gmp (Gnu multiple precision) values to ensure public and private keys are large enough primes for which encryption and decryption are secure for the sender of the message and the intended recipient. As such, this program consists of three main programs which are the RSA key generation (keygen.c), RSA encryption (encrypt.c) and RSA decryption (decrypt.c).

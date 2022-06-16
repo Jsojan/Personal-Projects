@@ -10,31 +10,25 @@
 #include "defines.h"
 
 // Initialize extern variables and the static buffer needed. Create
-// a static index variable to be used for read_bit. TA Miles helped me
-// with initializing the buffer.
+// a static index variable to be used for read_bit. 
 
 uint64_t bytes_read = 0;
 uint64_t bytes_written = 0;
 
 static uint8_t buffer[BLOCK] = { 0 };
+
 // Index will be used for read bits while top will be used for write_code
 // and flush codes.
+
 static int index = 0;
 static int top = 0;
 
-// From TA Eugene Chou Tutoring session on Friday 2/25/2022 he mentioned that
-// implementing a static variable to be used for read_bit woud be helpful. The
 // -1 refers to the last element in the buffer as the default value.
 
 static int end = -1;
 
 // This function performs reads and returns the number of bytes read
-// if it was succesful as an integer. TA Ben Grant helped fix the read and
-// write bytes loop so that they would read and write the correct number of
-// bytes. TA Ben helped fix my read and write bytes during his office hours on
-// Friday 2/25/2022 by fixing my while condition and to add a break statement
-// for bytes_left == nbytes otherwise it would read/ write more bytes than
-// necessary.
+// if it was succesful as an integer.
 
 int read_bytes(int infile, uint8_t *buf, int nbytes) {
     // Create needed variables.
@@ -64,9 +58,7 @@ int read_bytes(int infile, uint8_t *buf, int nbytes) {
 }
 
 // This function performs writes and returns the number of bytes written if
-// it was succesful as an integer. Again, credit goes to TA Ben Grant for
-// fixing my while loop condition and the implementation of the break
-// statement so that my program would write the correct number of bytes.
+// it was succesful as an integer.
 
 int write_bytes(int outfile, uint8_t *buf, int nbytes) {
     int bywrite = 1;
@@ -96,9 +88,7 @@ int write_bytes(int outfile, uint8_t *buf, int nbytes) {
 // This function reads a bit from the input file by reading in a byte first
 // and doling out all the bits of the byte. Since this function is bool
 // type, this function returns false if no more bits can be read, and true if
-// there are more. Note, all credit is given to TA Eugene Chou during his
-// office hours on 2/25/2022 since my implementation of this is based off
-// of the psuedocode he provided during his assigment 6 lab session.
+// there are more.
 
 bool read_bit(int infile, uint8_t *bit) {
     // If index is 0 assume that the buffer needs to be filled with bytes
@@ -111,9 +101,8 @@ bool read_bit(int infile, uint8_t *bit) {
         }
     }
     // If index is within the range then get the specified bit at the current
-    // index and set the bit pointer to the bit retreived. This bit shift
-    // implementation is based on the implementation I created for code.c
-    // and the bit vectors lecture.
+    // index and set the bit pointer to the bit retreived.
+
     if (index >= 0) {
         int gshift = 0x1 << (index % 8);
         gshift = buffer[index / 8] & gshift;
@@ -155,10 +144,6 @@ bool read_bit(int infile, uint8_t *bit) {
 // This function works similarly to read_bit in the fact that it requires
 // the static buffer and index. Each bit in code c will be buffered into
 // the buffer and the bits will be buffered starting from the 0th bit in c.
-// Credit to TA Brian Mak and TA Miles for helping me fix part of my
-// write code function during their tutoring session so now it writes the
-// correct bits from the code regardless of how many times write_code is
-// called.
 
 void write_code(int outfile, Code *c) {
     // Initialize shift implementation borrowed from get bit from code.c
@@ -202,8 +187,7 @@ void write_code(int outfile, Code *c) {
 
 void flush_codes(int outfile) {
     // The adding of 7 to top performs a pseudo floor for rounding up the
-    // flush bytes. This implementation was given by TA Eugene Chou during
-    // his office hours on 2/23/22.
+    // flush bytes.
 
     if (top > 0) {
         int flush = (top + 7) / 8;

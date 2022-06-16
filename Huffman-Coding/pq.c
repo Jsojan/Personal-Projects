@@ -22,9 +22,6 @@ struct PriorityQueue {
 
 // This function serves as the constructor for the priority que. This
 // function should return a pointer that points to the priority queue.
-// During class on 2/18/22, Professor Long showed an example of creating
-// a queue which I referred to when creating my priority queue create
-// function as reference.
 
 PriorityQueue *pq_create(uint32_t capacity) {
     // Dynamically allocate space for priority queue.
@@ -111,13 +108,9 @@ bool enqueue(PriorityQueue *q, Node *n) {
     // Enqueue a node will be succesful now so increment count.
     q->count = q->count + 1;
 
-    // Perform insertion sort at this point. Note, the insertion sort used
-    // here is based off the python pseudocode provided for insertion sort in
-    // assignment 3 sorting file (page 2) which I used for the priority queue.     // The array will be sorted in increasing order of node frequency so as to     // dequeue from the head where the lowest frequency nodes should be.
-
-    // TA Eugene Chou said that the implementation of the queue could be made
-    // with either a Min Heap or Insertion method for returning the root of
-    // highest priority.
+    // Perform insertion sort at this point.The array will be sorted in 
+    // increasing order of node frequency so as to dequeue from the head 
+    // where the lowest frequency nodes should be.
 
     // Start a while loop that iterates until the end of the current queue.
     for (uint32_t i = 1; i < q->count; i++) {
@@ -153,10 +146,6 @@ bool enqueue(PriorityQueue *q, Node *n) {
 
 // This function dequeues a node from the priority queue if is not empty.
 // Since this is a boolean function it returns true if dequeue was succeful.
-// Credit to TA Eugene Chou since I had to rewatch his asgn6 lab section
-// video on 2/11/2022 again to realize that incrementing the head without
-// changing the elements position in the array gave the wrong root in my
-// priority queue.
 
 bool dequeue(PriorityQueue *q, Node **n) {
     // Declare an index i variable to be used when dequeueing next node.

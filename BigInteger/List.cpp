@@ -1,7 +1,7 @@
 /******************************************************************************
 *
 * Joel Sojan, jsojan
-* CSE101 Spring 2022 PA6
+* 
 * List.cpp
 * This is the main C++ file that contains the implementation of the List ADT.
 ******************************************************************************/

@@ -6,11 +6,10 @@
 #include "stack.h"
 #include "node.h"
 
-// Create ADT for Stack as provided by the assignment 6 file. Capacity
-// stores the capacity of the stack, top is used for top index and items
-// store the number of items in the stack. The implementation of this function
-// is very similar to that of the pq.c for the Priority Queue which is where
-// the similarities of this implementation are.
+// Create ADT that stores the capacity of the stack, top is used for top 
+// index and items store the number of items in the stack. The implementation 
+// of this function is very similar to that of the pq.c for the Priority 
+// Queue which is where the similarities of this implementation are.
 
 struct Stack {
     uint32_t top;

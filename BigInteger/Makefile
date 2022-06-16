@@ -2,6 +2,8 @@
 #
 # Joel Sojan, jsojan
 #
+# This is the Makefile used for the BigInteger and List ADT program
+#
 # make all                        makes all neccesary objects for PA6
 # make BigIntegerTest             makes BigIntegerTest
 # make ListTest                   makes ListTest

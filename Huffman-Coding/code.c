@@ -10,7 +10,6 @@
 // This function is somewhat of a constructor function that will create
 // a new Code on the stack, set top to 0, and 0 the bits of the array. Since
 // this function is Code type it should return the initialized Code.
-// TA Miles helped fix my code initialize function.
 
 Code code_init(void) {
     // Initialize code, set top to 0 and 0 the bits of the array.
@@ -60,10 +59,8 @@ bool code_full(Code *c) {
 
 // This function should set the bit at index i in the Code as 1 and return
 // true if this was succesful. However, if index i is out of range then
-// return false since it is a bool type function. This implementation of
-// bit shifting was provided in the bit vector lecture on 2/18/2022,
-// specifically slide 21 which covers how to set the bit.
-
+// return false since it is a bool type function.
+//
 bool code_set_bit(Code *c, uint32_t i) {
     // Check if the index i is in range.
     if (i > (MAX_CODE_SIZE * 8)) {
@@ -81,8 +78,7 @@ bool code_set_bit(Code *c, uint32_t i) {
 
 // This function clears the bit at index i in the Code as 0 and return
 // true if this was succesful. However, if index i is out of range then
-// return false as it is also a bool type function. This implementation
-// is also based on the bit vectors lecture example on slide 22.
+// return false as it is also a bool type function. 
 
 bool code_clr_bit(Code *c, uint32_t i) {
     // Check if the index i is in range.
@@ -103,8 +99,6 @@ bool code_clr_bit(Code *c, uint32_t i) {
 // This function gets the bit at index i in the code and returns true if
 // the returned bit is 1. If the index specified is out of range or the
 // returned bit is 0 then this function returns false as a bool type function.
-// This function was implementated based on getting the bit example in the
-// bit vectors lecture.
 
 bool code_get_bit(Code *c, uint32_t i) {
     // Check if the index i is in range.

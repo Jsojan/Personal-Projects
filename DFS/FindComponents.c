@@ -1,7 +1,7 @@
 /******************************************************************************
 *
 * Joel Sojan, jsojan
-* 2022 Spring CSE101 PA3
+*
 * FindComponents.c
 * Main program for PA3 which uses the Graph ADT
 ******************************************************************************/
@@ -12,14 +12,6 @@
 #include <stdbool.h>
 
 #include "Graph.h"
-
-// Note my implemenation of checking the input and output files can be opened
-// and nonNULL as well as reading in the lines from the input file to an
-// integer buffer are borrowed from my own implementation of the same 
-// task in FindPath.c from pa2. Furthermore, printing the adjacency list is
-// very similar to pa2 FindPath.c which also printed the adjacency list of
-// graph G in the exact same manner. Thus, that was also borrowed from my
-// own implementation of printing the adjacency list in FindPath.c in pa2.
 
 // Create main function.
 int main(int argc, char *argv[]) {

@@ -1,4 +1,4 @@
-# Assignment 6 - Huffman Coding (README.md)
+# Huffman Coding (README.md)
 
 ## Short description:
      This progam performs Huffman Coding which utilizes the concept of entropy to assign symbols and values less bits the more frequent they are in a message or text file and vise versa. As such, Huffman Coding's one significant advantage is its ability to compress data in a file dby utilizing entropy for encoding and decoding. Furthermore, the implementaion of Huffman Coding relies on the creation of a Priority Queue (this implementation was created based of Insertion Sort), Stack, bitwise shifts of Huffman Codes, and an implementation of a Huffman Tree.
